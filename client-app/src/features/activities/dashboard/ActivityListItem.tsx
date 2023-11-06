@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Icon, Item, Segment } from "semantic-ui-react";
-import { Activity } from "../../../app/modules/activity";
+import { Activity } from "../../../app/models/activity";
 import { Link } from "react-router-dom";
 
 interface Props{
@@ -15,7 +15,7 @@ export default function ActivityListItem({activity}: Props){
             <Segment>
                 <Item.Group>
                     <Item>
-                        <Item.Image siz='tiny' circular src='/assets/user.png'/>
+                        <Item.Image size='tiny' circular src='/assets/user.png'/>
                         <Item.Content>
                             <Item.Header as={Link} to={`/activities/${activity.id}`}>
                                 {activity.title}
